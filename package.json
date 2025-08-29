@@ -1,0 +1,20 @@
+{
+  "name": "agent-sdk-browseruse",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openai/agents": "^0.0.17",
+    "dotenv": "^17.2.1",
+    "playwright": "^1.55.0",
+    "sharp": "^0.34.3",
+    "zod": "^3.25.76"
+  }
+}
