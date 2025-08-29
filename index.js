@@ -288,3 +288,14 @@ Password admin123,
 Confirm Password admin123,
 and click Create Account.
 `);
+
+/*chatWithAgent(`
+Open browser, go to https://www.sudheshholla.in/,
+find contact button and click it,
+take screenshot labeled contact,
+then fill the form with:
+Full name Sudhesh Holla,
+Email sudheshholla15@gmail.com,
+Your Message Hi Sudhesh, this automated message from an AI agent,
+and click Send Message.
+`); */
