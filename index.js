@@ -173,12 +173,15 @@ const fillFormFields = tool({
   parameters: z.object({
     firstName: z.string().nullable(),
     lastName: z.string().nullable(),
+    fullName: z.string().nullable(),
     email: z.string().nullable(),
+    userName: z.string().nullable(),
     password: z.string().nullable(),
     confirmPassword: z.string().nullable(),
+    message: z.string().nullable(),
     perFieldDelayMs: z.number().nullable()
   }),
-  execute: async ({ firstName, lastName, email, password, confirmPassword, perFieldDelayMs }) => {
+  execute: async ({ firstName, lastName, fullName, email, userName, password, message, confirmPassword, perFieldDelayMs }) => {
     if (!page) throw new Error('Browser not initialized. Call open_browser first.');
     const results = [];
     const delay = typeof perFieldDelayMs === 'number' ? perFieldDelayMs : 120;
@@ -211,8 +214,11 @@ const fillFormFields = tool({
     const tasks = [
       { key: 'First Name', value: firstName, labels: ['First Name','Firstname','Given Name','First'] },
       { key: 'Last Name',  value: lastName,  labels: ['Last Name','Lastname','Surname','Family Name','Last'] },
+      { key: 'Full Name', value: fullName, labels: ['Full Name','Full name','FullName','fullName'] },
       { key: 'Email',      value: email,     labels: ['Email','Email Address','E-mail'] },
+      { key: 'Username', value: userName,     labels: ['Username','UserName','User name'] },
       { key: 'Password',   value: password,  labels: ['Password','New Password'] },
+      { key: 'Your Message', value: message, labels: ['Your Message', 'message'] },
       { key: 'Confirm Password', value: confirmPassword, labels: ['Confirm Password','Re-enter Password','Retype Password','Confirm'] }
     ];
 
