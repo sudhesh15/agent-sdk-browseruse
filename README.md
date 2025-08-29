@@ -110,6 +110,8 @@ Screenshots are stored in:
 
 /screenshots/shot-<timestamp>-<label>.png
 
+Screenrecording - https://www.youtube.com/watch?v=6xUyjRoDSLk
+
 
 Example:
 
